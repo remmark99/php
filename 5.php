@@ -1,9 +1,13 @@
 <?php
-$a = 1123;
-$b = 25435;
 
-$a ^= $b;
-$b = $a ^ $b;
-$a ^= $b;
+function renderTemplate($page, $content = '')
+{
+    ob_start();
+    $fileName = $page . ".php";
+    include $fileName;
+    return ob_get_clean();
+}
 
-echo $a, $b;
+//Вам нужно поменять только выражение ниже
+//чтобы зарендерить и main и about внутри него
+echo renderTemplate('main', file_get_contents("about.php"));
