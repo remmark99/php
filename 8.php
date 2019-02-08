@@ -10,7 +10,9 @@ foreach ($array as $key => $region) {
     $cities = "";
     echo "$key:<br>";
     foreach ($region as $city) {
-        $cities .= $city . ", ";
+        if (mb_substr($city, 0, 1) === "К") {
+            $cities .= $city . ", ";
+        }
     }
     echo rtrim($cities, ", ") . "<br>";
 }

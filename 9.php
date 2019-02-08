@@ -16,16 +16,12 @@ $alphabet = [
 
 $sentence = "Привет, я";
 
-echo ucfirst(strtr(mb_strtolower($sentence), $alphabet)) . "<br>"; //Не учитывает заглавные буквы посреди слова и другие слова
+$string = ucfirst(strtr(mb_strtolower($sentence), $alphabet)) . "<br>"; //Не учитывает заглавные буквы посреди слова и другие слова
+echo $string = strtr($string, " ", "_");
 
 $string = "";
 foreach(preg_split("//u", mb_strtolower($sentence)) as $letter) { //Сложно читается, но короче)
     $string .= $alphabet[$letter] == NULL ? $letter : $alphabet[$letter];
-//    if ($alphabet[$letter] == NULL) {
-//        echo $letter;
-//    } else {
-//        echo $alphabet[$letter];
-//    }
 }
 
-echo ucfirst($string);
+echo ucfirst(strtr($string, " ", "_"));
