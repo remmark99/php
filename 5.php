@@ -5,3 +5,5 @@ function changeString($string) {
 }
 
 echo changeString(" Привет мир Hello world ");
+
+//
