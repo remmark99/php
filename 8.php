@@ -16,3 +16,5 @@ foreach ($array as $key => $region) {
     }
     echo rtrim($cities, ", ") . "<br>";
 }
+
+//

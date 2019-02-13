@@ -25,3 +25,5 @@ foreach(preg_split("//u", mb_strtolower($sentence)) as $letter) { //Сложно
 }
 
 echo ucfirst(strtr($string, " ", "_"));
+
+//

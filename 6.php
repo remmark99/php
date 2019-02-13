@@ -38,3 +38,5 @@ function getMenu($array) {
 }
 
 echo getMenu($menu);
+
+//
